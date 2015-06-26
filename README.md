@@ -1,5 +1,7 @@
 # Slack-UserAdmin
 
+**A tool to streamline user management on Slack**
+
 Oftentimes, people within an organisation need or must be part of Slack private
 groups or public channels based on their roles (for example they may need to be
 part of their team's private group, but also be part of several cross-team
