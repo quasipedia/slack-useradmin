@@ -63,3 +63,52 @@ And provides facilities for:
 5. Each _dominus_ associate tags (or combinations of them) to channels/groups.
 6. All channels and/or groups are automatically created, and the correct
    _slackizens_ are automatically invited to them.
+
+# Commands
+
+The following is the complete list of commands available in Slack-Useradmin.
+
+## send-token E-MAIL ...
+
+[admin, dominus]
+
+    /xxx send-token alpha@example.com bravo@example.com charlie@foobar.nz
+
+Send a unique, distinct token to each of the mail adresses given as parameters.
+The token is later to be used with the `i-am` command.
+
+## i-am TOKEN
+
+[member]
+
+    /xxx i-am 7f0aacbd-d220-4450-a9c0-4a23d4f7ec26
+
+The _maverik_ issuing this command will associate their account to the _user_
+whose token has been generated for.  If the command succeeds, the _maverik_ is
+now a _slackizen_.
+
+## they-are SLACK-USERNAME USER-EMAIL
+
+[admin, dominus]
+
+    /xxx they-are @goldenunicorn foo.bar@example.com
+
+Has the same effect of `i-am`, but does not require sending tokens nor any
+action from the _maverik_'s side (requires you to know who the hell is
+@goldenunicorn, though!)
+
+## me
+
+[admin, dominus, member]
+
+    /xxx me
+
+Return informations on associated e-mail[s] for the slackizen, their tags and
+participation in groups/channels.
+
+## tag USER-EMAIL ±TAG ...
+
+[admin, dominus]
+
+    /xxx foo.bar@example.com +dev +front-end +junior
+    /xxx spam@example.com -junior +senior
